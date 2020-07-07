@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+nav {
+    height: 10vh; /* Relative to 1% of the height of browser window size */
+    background: #5b78c7;
+}
+
+.nav-links {
+    display: flex; /* Shows the lists horizontally */
+    list-style: none; /* Removes bullet points from unordered list */
+}
+
+.nav-links li a{
+    color: white;
+    text-decoration: none; /* removes underlines from links */
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
