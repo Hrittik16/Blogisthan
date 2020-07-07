@@ -29,18 +29,84 @@ nav {
     font-size: 16px;
 }
 
-.Landing {
+.landing {
     height: 90vh; /* nav bar takes 10% of the height and it take the rest 90% */
     display: flex; /* Shows the content horizontally rather than vertically */
     justify-content: center; /* Takes the content to the center horizontally */
     align-items: center; /* Takes the content to the center vertically */
 }
 
-.Landing h1 {
+.landing h1 {
     margin: 100px;
     font-size: 50px;
     color: #ae5fce;
 }
+
+@media screen and (max-width: 1024px) {
+    
+    .line { /* line is inside hamburger class */
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+    }
+    
+    nav {
+        position: relative; /* This is the parent element. So, all the elements inside it can be positioned relative to it */
+    }
+
+    .hamburger {
+        position: absolute;
+        cursor: pointer; /* Changes the cursor to pointer */
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2; /* This will make sure that after clicking the hamburger it still shows up */
+    }
+
+    .nav-links {
+        position: fixed; /* Position is fixed here. When we scroll it's position doesn't change */
+        background: #5b78c7;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column; /* It will be shown vertically in a column */
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all 1s ease-out;
+    }
+    .nav-links.open {
+        clip-path: circle(1200px at 90% -10%);
+        -webkit-clip-path: circle(1500px at 90% -10%);
+        
+    }
+    .landing {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+    .nav-links {
+        font-size: 25px;
+    }
+    .nav-links li:nth-child(1) {
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+        transition: all 0.5s ease 0.6s;
+    }
+    li.fade {
+        opacity: 1;
+    }
+}
+
+
+
+
+
 
 
 
