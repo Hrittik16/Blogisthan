@@ -9,13 +9,18 @@ body {
 }
 
 nav {
-    height: 10vh; /* Relative to 1% of the height of browser window size */
+    height: 10vh; /* Relative to 10%(10vh) of the height of browser window size */
     background: #5b78c7;
 }
 
 .nav-links {
     display: flex; /* Shows the lists horizontally */
     list-style: none; /* Removes bullet points from unordered list */
+    width: 50%; /* This will make sure that our nav bar takes 50% space in the entire header. Add background: lightcoral to see how much space it is taking */
+    height: 100%; /* This will make the unordered lists to cover 100% height of the nav bar */
+    justify-content: space-around; /* Gives equal space between each element horizontally*/
+    align-items: center; /* Takes the elements to the center vertically */
+    margin-left: auto; /* The list was on the left. But this line makes the list take the other 50% of the nav bar. That means takes it to the right side */
 }
 
 .nav-links li a{
@@ -24,7 +29,18 @@ nav {
     font-size: 16px;
 }
 
+.Landing {
+    height: 90vh; /* nav bar takes 10% of the height and it take the rest 90% */
+    display: flex; /* Shows the content horizontally rather than vertically */
+    justify-content: center; /* Takes the content to the center horizontally */
+    align-items: center; /* Takes the content to the center vertically */
+}
 
+.Landing h1 {
+    margin: 100px;
+    font-size: 50px;
+    color: #ae5fce;
+}
 
 
 
